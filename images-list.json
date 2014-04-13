@@ -1,4 +1,4 @@
-callImages({
+SGPlusV2.callImages({
     "images": [
         {
             "app": "277430",
