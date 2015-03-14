@@ -1,0 +1,16 @@
+<div class="form__row">
+	<div class="form__heading">
+		<div class="form__heading__number">{{ number }}.</div>
+		<div class="form__heading__text">
+			<div class="SGPP__settings-checkbox is-disabled form__checkbox">
+				<i class="form__checkbox__default fa fa-circle-o"> </i>
+				{{ friendly_name }}
+			</div>
+		</div>
+	</div>
+	<div class="form__row__indent">
+		<div class="form__input-description">{{ description }}</div>
+		<input type="hidden" name="{{ name }}" value="0">
+	</div>
+	{% block extra %}{% endblock %}
+</div>

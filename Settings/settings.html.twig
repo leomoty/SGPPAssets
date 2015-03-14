@@ -1,0 +1,20 @@
+{% import "macros.html.twig" as macros %}
+
+{% extends "base.html.twig" %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+	<form>
+		<div class="forms__rows">
+			{{ macros.heading('#', 'Comment and Enter') }}
+			{% embed "module.html.twig" with {'number' : '1', 'friendly_name' : 'Enabled', 'description' : 'Creates a button that allows both comment and enter.', 'name' : 'SGPP__CommentAndEnter'} %}
+			{% endembed %}
+
+			{{ macros.heading('#', 'Entry Commenters') }}
+			{% embed "module.html.twig" with {'number' : '1', 'friendly_name' : 'Enabled', 'description' : 'Allows to check which entries/winners commented on the giveaway.', 'name' : 'SGPP__EntryCommenters'} %}
+			{% endembed %}			
+		</div>
+	</form>
+{% endblock %}
