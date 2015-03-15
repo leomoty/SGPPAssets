@@ -8,9 +8,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="form__row__indent">
-		<div class="form__input-description">{{ description }}</div>
-		<input type="hidden" name="{{ name }}" value="0">
-	</div>
+	{% if not description is empty %}
+		<div class="form__row__indent">
+			<div class="form__input-description">{{ description }}</div>
+		</div>
+	{% endif %}
+	<input type="hidden" name="{{ name }}" value="0">
 	{% block extra %}{% endblock %}
 </div>
