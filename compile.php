@@ -6,6 +6,10 @@ $loader = new Twig_Loader_Filesystem("./Settings/");
 
 $twig = new Twig_Environment($loader);
 
-echo $twig->render('settings.html.twig');
+try {
+	echo $twig->render('settings.html.twig');
+} catch(\Twig_error $e){
+	echo $e;
+}
 
 ?>

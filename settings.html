@@ -47,8 +47,7 @@
 		<div class="form__input-description">Allows to check which entries/winners commented on the giveaway.</div>
 		<input type="hidden" name="SGPP__EntryCommenters" value="0">
 	</div>
-	</div>			
-		</div>
+	</div>		</div>
 	</form>
 			</div>
 		</div>
@@ -59,7 +58,7 @@
 	    var el = $(this);
 	    var child = el.children('.SGPP__form__checkbox');
 	    el.toggleClass('is-enabled');
-	    child.removeClass('fa-circle'); 
+	    child.removeClass('fa-circle');
 	    child.toggleClass('fa-circle-o', !el.hasClass('is-enabled'));
 	    child.toggleClass('fa-check-circle', el.hasClass('is-enabled'));
 	});

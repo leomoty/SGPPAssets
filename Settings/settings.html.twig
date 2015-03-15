@@ -14,7 +14,7 @@
 
 			{{ macros.heading('#', 'Entry Commenters') }}
 			{% embed "module.html.twig" with {'number' : '1', 'friendly_name' : 'Enabled', 'description' : 'Allows to check which entries/winners commented on the giveaway.', 'name' : 'SGPP__EntryCommenters'} %}
-			{% endembed %}			
+			{% endembed %}
 		</div>
 	</form>
 {% endblock %}
@@ -24,7 +24,7 @@
 	    var el = $(this);
 	    var child = el.children('.SGPP__form__checkbox');
 	    el.toggleClass('is-enabled');
-	    child.removeClass('fa-circle'); 
+	    child.removeClass('fa-circle');
 	    child.toggleClass('fa-circle-o', !el.hasClass('is-enabled'));
 	    child.toggleClass('fa-check-circle', el.hasClass('is-enabled'));
 	});
