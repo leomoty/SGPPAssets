@@ -4,7 +4,29 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/minified.css">
 <style>
-	.page__heading{
-		margin-bottom: 10px;
-	}
+    .page__heading{
+        margin-bottom: 10px;
+    }
+    input {display: none;}
+    label.SGPP__settings-checkbox:before {
+        content: '\f10c'; /*fa-circle-o*/
+    }
+    input:not(:checked) + label.SGPP__settings-checkbox:hover:before {
+        content: '\f111'; /*fa-circle*/
+    }
+    input:checked + label:before {
+        content: '\f058'; /*fa-check-circle*/
+    }
+    input:checked + label:not(:hover) {
+        color: #4B72D4;
+    }
+    .page__heading {
+        counter-reset: moduleOption;
+    }
+    .form__heading__text:before {
+        counter-increment: moduleOption;
+        content: counter(moduleOption) ".";
+        color: #6B7A8C;
+        font-weight: 300;
+    }
 </style>
