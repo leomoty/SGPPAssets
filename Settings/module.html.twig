@@ -1,11 +1,10 @@
 <div class="form__row">
 	<div class="form__heading">
-		<div class="form__heading__number">{{ number }}.</div>
 		<div class="form__heading__text">
-			<div class="SGPP__settings-checkbox is-disabled form__checkbox">
-				<i class="SGPP__form__checkbox fa fa-circle-o"> </i>
-				{{ friendly_name }}
-			</div>
+			<input type=checkbox id="{{ name }}" name="{{ name }}" class="SGPP__form__checkbox"></input>
+			<label for="{{ name }}" class="SGPP__settings-checkbox form__checkbox fa">
+				{{ title }}
+			</label>
 		</div>
 	</div>
 	{% if not description is empty %}
@@ -13,6 +12,5 @@
 			<div class="form__input-description">{{ description }}</div>
 		</div>
 	{% endif %}
-	<input type="hidden" name="{{ name }}" value="0">
 	{% block extra %}{% endblock %}
 </div>
