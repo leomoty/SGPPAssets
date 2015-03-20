@@ -7,8 +7,15 @@
     .page__heading{
         margin-bottom: 10px;
     }
-    input {display: none;}
+    .form__heading {
+        text-transform: capitalize
+    }
+    input[type=checkbox] {
+        display: none;
+    }
     label.SGPP__settings-checkbox:before {
+        font-family: FontAwesome;
+        font-weight: normal;
         content: '\f10c'; /*fa-circle-o*/
     }
     input:not(:checked) + label.SGPP__settings-checkbox:hover:before {
@@ -21,11 +28,19 @@
         color: #4B72D4;
     }
     .page__heading {
-        counter-reset: moduleOption;
+        counter-reset: modules;
     }
-    .form__heading__text:before {
-        counter-increment: moduleOption;
-        content: counter(moduleOption) ".";
+    .SGPP__Module:before {
+        counter-increment: modules;
+        content: counter(modules) ". ";
+        color: #6B7A8C;
+        font-weight: 300;
+    }
+    .SGPP__option {
+        counter-increment: options;
+    }
+    .SGPP__optionTitle:before {
+        content: counter(modules) "." counter(options) " ";
         color: #6B7A8C;
         font-weight: 300;
     }
