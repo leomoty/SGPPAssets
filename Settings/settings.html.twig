@@ -6,62 +6,53 @@
 {% endblock %}
 
 {% block content %}
-	<form>
-		<div class="forms__rows">
-			{{ macros.heading('Comment and Enter') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Creates a button on the giveaway page that allows you to both post your message and enter the giveaway. Saving time!', 'name' : 'SGPP__CommentAndEnter'} %}
-				{% endembed %}
+    <form>
+        <div class="forms__rows">
 
-			{{ macros.heading('Entry Commenters') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Allows to check which entries/winners commented on the giveaway.', 'name' : 'SGPP__EntryCommenters'} %}
-				{% endembed %}
+            {{ macros.heading('Comments') }}
+                {% embed "module.html.twig" with {'title' : 'Track Comments', 'description' : 'Track Comments...', 'name' : 'MarkComments'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'All Read Button', 'description' : 'Allows to toggle visibility of read comments.', 'name' : 'MessagesFilterTest'} %}
+                {% endembed %}
 
-			{{ macros.heading('Fixed Entities') }}
-				{% embed "module.html.twig" with {'title' : 'Navbar', 'name' : 'SGPP__FixedNavbar'} %}
-				{% endembed %}
-				{% embed "module.html.twig" with {'title' : 'Footer', 'name' : 'SGPP__FixedFooter'} %}
-				{% endembed %}
+            {{ macros.heading('Endless Scroll') }}
+                {% embed "module.html.twig" with {'title' : 'Discussions', 'description' : 'Puts Endless Scrolls on both Trades/Discussions', 'name' : 'EndlessScrollDiscussion'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Discussions Replies', 'description' : 'Puts Endless Scrolls on both Trades/Discussions Replies', 'name' : 'EndlessScrollDiscussionReplies'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Giveaways', 'description' : 'Puts Endless Scrolls on Giveaways page', 'name' : 'EndlessScrollGiveaways'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Giveaway Comments', 'description' : 'Puts Endless Scrolls on Giveaway Comments', 'name' : 'EndlessScrollGiveawayComments'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Lists', 'description' : 'Puts Endless Scrolls on other Lists', 'name' : 'EndlessScrollLists'} %}
+                {% endembed %}
 
-			{{ macros.heading('Gridview') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Places giveaways in a grid pattern. Saving space and optimizing the layout.', 'name' : 'SGPP__GridView'} %}
-				{% endembed %}
+            {{ macros.heading('Fixed Entities') }}
+                {% embed "module.html.twig" with {'title' : 'Navbar', 'name' : 'FixedNavbar'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Footer', 'name' : 'FixedFooter'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Sidebar', 'name' : 'ScrollingSidebar'} %}
+                {% endembed %}
 
-			{{ macros.heading('Comments') }}
-				{% embed "module.html.twig" with {'title' : 'Mark Comments', 'description' : 'Mark Comments...', 'name' : 'SGPP__MarkComments'} %}
-				{% endembed %}
-				{% embed "module.html.twig" with {'title' : 'All Read Button', 'description' : 'Allows to toggle visibility of read comments.', 'name' : 'SGPP__MessagesFilterTest'} %}
-				{% endembed %}
+            {{ macros.heading('Giveaways') }}
+                {% embed "module.html.twig" with {'title' : 'Popup', 'description' : 'Shows the giveaway', 'name' : 'PopupGiveaway'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'GridView', 'description' : 'Places giveaways in a grid pattern. Saving space and optimizing the layout.', 'name' : 'GridView'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Entry Commenters', 'description' : 'Allows to check which entries/winners commented on the giveaway.', 'name' : 'EntryCommenters'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Comment and Enter', 'description' : 'Creates a button on the giveaway page that allows you to both post your message and enter the giveaway. Saving time!', 'name' : 'CommentAndEnter'} %}
+                {% endembed %}
 
-			{{ macros.heading('Popup Giveaways') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Places giveaways in a grid pattern. Saving space and optimizing the layout.', 'name' : 'SGPP__PopupGiveaway'} %}
-				{% endembed %}
+            {{ macros.heading('User') }}
+                {% embed "module.html.twig" with {'title' : 'Tagging', 'description' : 'Scrolling Sidebar.', 'name' : 'UserTags'} %}
+                {% endembed %}
+                {% embed "module.html.twig" with {'title' : 'Hover Info', 'description' : 'Scrolling Sidebar.', 'name' : 'UserHoverInfo'} %}
+                {% endembed %}
 
-			{{ macros.heading('Scrolling Sidebar') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Scrolling Sidebar.', 'name' : 'SGPP__ScrollingSidebar'} %}
-				{% endembed %}
-
-			{{ macros.heading('User Hover Info') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Scrolling Sidebar.', 'name' : 'SGPP__UserHoverInfo'} %}
-				{% endembed %}
-
-			{{ macros.heading('User Tagging') }}
-				{% embed "module.html.twig" with {'title' : 'Enabled', 'description' : 'Scrolling Sidebar.', 'name' : 'SGPP__UserTags'} %}
-				{% endembed %}
-
-			{{ macros.heading('Endless Scroll') }}
-				{% embed "module.html.twig" with {'title' : 'Discussions', 'description' : 'Puts Endless Scrolls on both Trades/Discussions', 'name' : 'SGPP__EndlessScrollDiscussion'} %}
-				{% endembed %}
-				{% embed "module.html.twig" with {'title' : 'Discussions Replies', 'description' : 'Puts Endless Scrolls on both Trades/Discussions Replies', 'name' : 'SGPP__EndlessScrollDiscussionReplies'} %}
-				{% endembed %}
-				{% embed "module.html.twig" with {'title' : 'Giveaways', 'description' : 'Puts Endless Scrolls on Giveaways page', 'name' : 'SGPP__EndlessScrollGiveaways'} %}
-				{% endembed %}
-				{% embed "module.html.twig" with {'title' : 'Giveaway Comments', 'description' : 'Puts Endless Scrolls on Giveaway Comments', 'name' : 'SGPP__EndlessScrollGiveawayComments'} %}
-				{% endembed %}
-				{% embed "module.html.twig" with {'title' : 'Lists', 'description' : 'Puts Endless Scrolls on other Lists', 'name' : 'SGPP__EndlessScrollLists'} %}
-				{% endembed %}
-
-	</div>
-	</form>
+    </div>
+    </form>
 {% endblock %}
 
 {% block scripts %}
