@@ -3,6 +3,7 @@
 {% extends "base.html.twig" %}
 
 {% block sidebar %}
+    <h3 class="sidebar__heading">Steamgifts++ Settings</h3>
 {% endblock %}
 
 {% block content %}
@@ -10,21 +11,21 @@
         <div class="forms__rows">
 
             {{ macros.heading('Comments') }}
-                {% embed "module.html.twig" with {'title' : 'Track Comments', 'description' : 'Track Comments...', 'name' : 'MarkComments'} %}
+                {% embed "module.html.twig" with {'title' : 'Track Comments', 'description' : 'Notify of new messages in visited topics.', 'name' : 'MarkComments'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'All Read Button', 'description' : 'Allows to toggle visibility of read comments.', 'name' : 'MessagesFilterTest'} %}
+                {% embed "module.html.twig" with {'title' : 'All Read Button', 'description' : 'Adds a toggle for hiding read comments.', 'name' : 'MessagesFilterTest'} %}
                 {% endembed %}
 
             {{ macros.heading('Endless Scroll') }}
-                {% embed "module.html.twig" with {'title' : 'Discussions', 'description' : 'Puts Endless Scrolls on both Trades/Discussions', 'name' : 'EndlessScrollDiscussion'} %}
+                {% embed "module.html.twig" with {'title' : 'Discussions', 'description' : 'Activates Endless Scrolls on both Trades/Discussions.', 'name' : 'EndlessScrollDiscussion'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'Discussions Replies', 'description' : 'Puts Endless Scrolls on both Trades/Discussions Replies', 'name' : 'EndlessScrollDiscussionReplies'} %}
+                {% embed "module.html.twig" with {'title' : 'Discussions Replies', 'description' : 'Activates Endless Scrolls on both Trade/Discussion Replies.', 'name' : 'EndlessScrollDiscussionReplies'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'Giveaways', 'description' : 'Puts Endless Scrolls on Giveaways page', 'name' : 'EndlessScrollGiveaways'} %}
+                {% embed "module.html.twig" with {'title' : 'Giveaways', 'description' : 'Activates Endless Scrolls on Giveaway pages.', 'name' : 'EndlessScrollGiveaways'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'Giveaway Comments', 'description' : 'Puts Endless Scrolls on Giveaway Comments', 'name' : 'EndlessScrollGiveawayComments'} %}
+                {% embed "module.html.twig" with {'title' : 'Giveaway Comments', 'description' : 'Activates Endless Scrolls on Giveaway Comment pages.', 'name' : 'EndlessScrollGiveawayComments'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'Lists', 'description' : 'Puts Endless Scrolls on other Lists', 'name' : 'EndlessScrollLists'} %}
+                {% embed "module.html.twig" with {'title' : 'Lists', 'description' : 'Activates Endless Scrolls on other Lists.', 'name' : 'EndlessScrollLists'} %}
                 {% endembed %}
 
             {{ macros.heading('Fixed Entities') }}
@@ -36,19 +37,19 @@
                 {% endembed %}
 
             {{ macros.heading('Giveaways') }}
-                {% embed "module.html.twig" with {'title' : 'Popup', 'description' : 'Shows the giveaway', 'name' : 'PopupGiveaway'} %}
+                {% embed "module.html.twig" with {'title' : 'Popup', 'description' : 'Open giveaways as overlay.', 'name' : 'PopupGiveaway'} %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'GridView', 'description' : 'Places giveaways in a grid pattern. Saving space and optimizing the layout.', 'name' : 'GridView'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'Entry Commenters', 'description' : 'Allows to check which entries/winners commented on the giveaway.', 'name' : 'EntryCommenters'} %}
+                {% embed "module.html.twig" with {'title' : 'Entry Commenters', 'description' : 'Allows to check which entries/winners commented on giveaways.', 'name' : 'EntryCommenters'} %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Comment and Enter', 'description' : 'Creates a button on the giveaway page that allows you to both post your message and enter the giveaway. Saving time!', 'name' : 'CommentAndEnter'} %}
                 {% endembed %}
 
             {{ macros.heading('User') }}
-                {% embed "module.html.twig" with {'title' : 'Tagging', 'description' : 'Scrolling Sidebar.', 'name' : 'UserTags'} %}
+                {% embed "module.html.twig" with {'title' : 'Tagging', 'description' : 'Add personalized tags for different users. (Only visble for you)', 'name' : 'UserTags'} %}
                 {% endembed %}
-                {% embed "module.html.twig" with {'title' : 'Hover Info', 'description' : 'Scrolling Sidebar.', 'name' : 'UserHoverInfo'} %}
+                {% embed "module.html.twig" with {'title' : 'Hover Info', 'description' : 'Hover on top of an avatar to see details and stats of a specific user.', 'name' : 'UserHoverInfo'} %}
                 {% endembed %}
 
     </div>
