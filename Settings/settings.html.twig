@@ -20,10 +20,16 @@
                 {% embed "module.html.twig" with {'title' : 'Discussions', 'description' : 'Activates Endless Scrolls on both Trades/Discussions.', 'name' : 'EndlessScrollDiscussion'} %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Discussions Replies', 'description' : 'Activates Endless Scrolls on both Trade/Discussion Replies.', 'name' : 'EndlessScrollDiscussionReplies'} %}
+                    {% block extra %}
+                        {{ macros.checkboxSetting('Reversed', 'reversedDiscussionReplies') }}
+                    {% endblock %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Giveaways', 'description' : 'Activates Endless Scrolls on Giveaway pages.', 'name' : 'EndlessScrollGiveaways'} %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Giveaway Comments', 'description' : 'Activates Endless Scrolls on Giveaway Comment pages.', 'name' : 'EndlessScrollGiveawayComments'} %}
+                    {% block extra %}
+                        {{ macros.checkboxSetting('Reversed', 'reversedGiveawayComments') }}
+                    {% endblock %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Lists', 'description' : 'Activates Endless Scrolls on other Lists.', 'name' : 'EndlessScrollLists'} %}
                 {% endembed %}
