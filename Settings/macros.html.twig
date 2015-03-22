@@ -1,19 +1,36 @@
 {% macro heading(text, href='') %}
-	<div class="page__heading">
-		<div class="page__heading__breadcrumbs">
-			<a {{ href ? 'href="' ~ href ~ '"' }}>{{ text }}</a>
-		</div>
-	</div>
+    <div class="page__heading">
+        <div class="page__heading__breadcrumbs">
+            <a {{ href ? 'href="' ~ href ~ '"' }}>{{ text }}</a>
+        </div>
+    </div>
 {% endmacro %}
 
-{% macro textsetting(title, name, default='', description='') %}
-	<div class="form__row__indent">
-		<div class="form__heading">
-			<div class="form__heading__text">{{ title }}</div>
-		</div>
-		<div class="form__row__indent">
-			<input class="form__input-small" type="text" name="{{ name }}" value="{{ default }}">
-			<div class="form__input-description">{{ description }}</div>
-		</div>
-	</div>
+{% macro textSetting(title, name, default='', description='') %}
+    <div class="form__row__indent SGPP__option">
+        <div class="form__heading">
+            <div class="form__heading__text SGPP__optionTitle">{{ title }}</div>
+        </div>
+        <div class="form__row__indent">
+            <input class="form__input-small" type="text" name="{{ name }}" value="{{ default }}">
+            {% if description %}<div class="form__input-description">{{ description }}</div>{% endif %}
+        </div>
+    </div>
 {% endmacro %}
+
+{% macro checkboxSetting(title, name, checked=false, description='') %}
+    <div class="form__row__indent SGPP__option">
+        <div class="form__heading">
+            <div class="form__heading__text SGPP__optionTitle">
+                <input class="SGPP__form__checkbox form__input-small" type=checkbox id="{{ name }}" name="{{ name }}">
+                <label for="{{ name }}" class="SGPP__settings-checkbox form__checkbox"> {{ title }} </label>
+            </div>
+        </div>
+        {% if description %}
+        <div class="form__row__indent">
+            <div class="form__input-description">{{ description }}</div>
+        </div>
+        {% endif %}
+    </div>
+{% endmacro %}
+
