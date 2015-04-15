@@ -51,10 +51,7 @@
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Comment and Enter', 'description' : 'Creates a button on the giveaway page that allows you to both post your message and enter the giveaway. Saving time!', 'name' : 'CommentAndEnter'} %}
                 {% endembed %}
-				{% embed "module.html.twig" with {'title' : 'Games Filter', 'description' : 'Filter Owned Games and games marked "Not Interested" on Steam, including DLC. Requires you to be logged in to Steam on current browser.', 'name' : 'MarkOwnedGames'} %}
-					{% block extra %}
-                        {{ macros.checkboxSetting('Hide Entry Button', 'hideEntryButton') }}
-                    {% endblock %}
+				{% embed "module.html.twig" with {'title' : 'Games Filter', 'description' : 'Hide Owned Games and "Not Interested" on Steam, including DLC. Requires you to be logged in to Steam on current browser.', 'name' : 'MarkOwnedGames'} %}
 				{% endembed %}
 
             {{ macros.heading('User') }}
