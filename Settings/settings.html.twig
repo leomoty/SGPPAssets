@@ -16,10 +16,6 @@
                 {% embed "module.html.twig" with {'title' : 'All Read Button', 'description' : 'Adds a toggle for hiding read comments.', 'name' : 'MessagesFilterTest'} %}
                 {% endembed %}
 				
-			{{ macros.heading('Giveaways Filter') }}
-				{% embed "module.html.twig" with {'title' : 'Enable Giveaways Filters', 'description' : '', 'name' : 'GiveawaysFilterBase'} %}
-				{% endembed %}
-				
             {{ macros.heading('Endless Scroll') }}
                 {% embed "module.html.twig" with {'title' : 'Discussions', 'description' : 'Activates Endless Scrolls on both Trades/Discussions.', 'name' : 'EndlessScrollDiscussion'} %}
                 {% endembed %}
@@ -47,6 +43,8 @@
                 {% endembed %}
 
             {{ macros.heading('Giveaways') }}
+				{% embed "module.html.twig" with {'title' : 'Show Giveaways Filters', 'description' : 'Shows Giveaways Filters', 'name' : 'GiveawaysFilter'} %}
+				{% endembed %}
                 {% embed "module.html.twig" with {'title' : 'Popup', 'description' : 'Open giveaways as overlay.', 'name' : 'PopupGiveaway'} %}
                 {% endembed %}
                 {% embed "module.html.twig" with {'title' : 'GridView', 'description' : 'Places giveaways in a grid pattern. Saving space and optimizing the layout.', 'name' : 'GridView'} %}
