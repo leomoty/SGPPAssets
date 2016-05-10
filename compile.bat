@@ -1,1 +1,1 @@
-php compile.php > settings.html
+C:\php\php compile.php > settings.html
